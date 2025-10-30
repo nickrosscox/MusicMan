@@ -5,12 +5,15 @@ import yt_dlp
 import asyncio
 import os
 from typing import Optional
+# Add this for debugging
+from dotenv import load_dotenv
+import os
 
-# ================================
-# CONFIGURATION
-# ================================
+load_dotenv()
+print(f"Current directory: {os.getcwd()}")
+print(f"Token found: {os.getenv('DISCORD_BOT_TOKEN') is not None}")
 
-BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")  # Replace with your Discord bot token
+BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 
 # ================================
 # YT-DLP OPTIONS (Optimized for streaming)
